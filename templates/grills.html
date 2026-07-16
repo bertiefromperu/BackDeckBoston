@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Meet the Grills | Back Deck Boston{% endblock %}
+{% block meta_description %}Meet the three charcoal broilers that power Back Deck's kitchen: Big Red, Monty and Nelly.{% endblock %}
+
+{% set about_active = 'grills' %}
+{% block content %}
+
+<section class="page-hero page-hero--compact">
+  <div class="container page-hero-content">
+    <p class="eyebrow">About &middot; Meet the Grills</p>
+    <h1>Big Red, Monty &amp; Nelly</h1>
+    <p class="lede">Three specialized charcoal broilers do the work in our kitchen &mdash; each built for a different job.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "_about_subnav.html" %}
+    <div class="grid grid-3">
+      <div class="grill-card reveal">
+        <div class="media media-photo-fire"></div>
+        <h3>&ldquo;Big Red&rdquo; &mdash; Woodshow Broiler</h3>
+        <p style="color:var(--ink-soft);">Built by J&amp;R in Texas, Big Red is our kitchen&rsquo;s primary grill. A wheel on the side raises and lowers the heavy cast-iron grate over the fire, allowing for nuanced heat control on every plate.</p>
+      </div>
+      <div class="grill-card reveal reveal-delay-1">
+        <div class="media media-photo-food1"></div>
+        <h3>&ldquo;Monty&rdquo; &mdash; Montague Charcoal Broiler</h3>
+        <p style="color:var(--ink-soft);">Made in California, Monty is a French-style enclosed grill that works like a charcoal-fueled oven &mdash; perfect for &ldquo;low and slow&rdquo; cooking, like a half chicken cooked under a brick. Montague has built grills for over 150 years.</p>
+      </div>
+      <div class="grill-card reveal reveal-delay-2">
+        <div class="media media-photo-food2"></div>
+        <h3>&ldquo;Nelly&rdquo; &mdash; Mt. St. Helens Shallow-Box Charbroiler</h3>
+        <p style="color:var(--ink-soft);">Built by Woodstone in Washington State, Nelly features an additional shallow firebox for coal or wood-fired cooking. She&rsquo;s named after owner Brad Fredericks&rsquo; daughter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

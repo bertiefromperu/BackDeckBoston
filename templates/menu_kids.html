@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% set menu_active = 'kids' %}
+
+{% block title %}Kid&rsquo;s Menu | Back Deck Boston{% endblock %}
+{% block meta_description %}Back Deck's kid's menu: $15 flat plates with a drink included, for guests 12 and under.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="hero-media media media-photo-deck"></div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">$15 flat &middot; includes a kiddie drink</p>
+    <h1>Kid&rsquo;s Menu</h1>
+    <p class="lede">Fountain soda, juice or milk included with every plate.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "_menu_toolbar.html" %}
+
+    <div class="menu-legend">
+      <span><span class="tag">GF</span> Gluten free</span>
+      <span>$4 charge per item for adults (12 &amp; older) ordering from the kids&rsquo; menu</span>
+    </div>
+
+    <div class="menu-columns">
+      <div class="menu-group">
+        <h3 class="menu-group-title">Kids &mdash; $15</h3>
+        <p class="menu-group-note">Includes a kiddie drink: fountain soda, juice or milk</p>
+        <div class="menu-item"><div class="menu-item-name">Grilled Chicken Wings</div><div class="menu-item-desc">Fries &amp; ranch dressing</div></div>
+        <div class="menu-item"><div class="menu-item-name">Cheeseburger Sliders</div><div class="menu-item-desc">Two mini smash burgers with American cheese, side of fries</div></div>
+        <div class="menu-item"><div class="menu-item-name">Grilled Cheese</div><div class="menu-item-desc">American cheese on multigrain bread, fries</div></div>
+        <div class="menu-item"><div class="menu-item-name">PB &amp; J</div><div class="menu-item-desc">Multigrain bread, fries</div></div>
+        <div class="menu-item"><div class="menu-item-name">Fried Chicken Fingers <span class="tag">GF</span></div><div class="menu-item-desc">Carrot sticks, fries &amp; ranch dressing</div></div>
+        <div class="menu-item"><div class="menu-item-name">Grilled Salmon</div><div class="menu-item-desc">Carrot sticks &amp; fries</div></div>
+        <div class="menu-item"><div class="menu-item-name">Grilled Hot Dog</div><div class="menu-item-desc">Side of fries</div></div>
+        <div class="menu-item"><div class="menu-item-name">Macaroni &amp; Cheese</div><div class="menu-item-desc">Add grilled chicken</div></div>
+        <div class="menu-item"><div class="menu-item-name">Bowl of Noodles</div><div class="menu-item-desc">Butter &amp; a side of grated cheese</div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Breakfast</h3>
+        <p class="menu-group-note">Brunch hours only</p>
+        <div class="menu-item"><div class="menu-item-name">Two Eggs*</div><div class="menu-item-desc">Home fries &amp; toast</div></div>
+        <div class="menu-item"><div class="menu-item-name">French Toast</div><div class="menu-item-desc">Maple syrup</div></div>
+
+        <h3 class="menu-group-title" style="margin-top:2rem;">Dessert</h3>
+        <div class="menu-item"><div class="menu-item-name">A Scoop of Ice Cream</div></div>
+      </div>
+    </div>
+
+    <p class="menu-item-note">* Cooked to order or contains raw ingredients &mdash; consumption of raw eggs, shellfish or under-cooked meats &amp; poultry may increase your risk of foodborne illness. Please inform your server if anyone in your party has a food allergy.</p>
+
+    <div class="menu-download">
+      <div>
+        <h4>Prefer the print version?</h4>
+        <p style="color:var(--ink-soft); font-size:0.9rem;">Download the PDF to view or print the full kid&rsquo;s menu.</p>
+      </div>
+      <a class="btn btn-outline btn-sm" href="https://www.backdeckboston.com/sites/default/files/4.5.25Kids.pdf" target="_blank" rel="noopener">Download PDF</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

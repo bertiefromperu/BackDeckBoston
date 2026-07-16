@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block title %}Back Deck | Charcoal Grill &amp; Backyard Cookout, Boston{% endblock %}
+{% block meta_description %}Backyard-style charcoal grilling on a laid-back deck in Downtown Crossing, Boston. Reserve on OpenTable, order online via Toast, or ask about private events.{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="hero-media media media-photo-hero">
+    <img src="{{ url_for('static', filename='img/BackDeck.jpg') }}" alt="BackDeck Restaurant Streetview" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+  </div>
+  <div class="container hero-content">
+    <p class="eyebrow">2 West St. &middot; Corner of West &amp; Washington</p>
+    <h1>Backyard grilling,<br>downtown Boston.</h1>
+    <p class="lede">Real hardwood charcoal, a laid-back deck on the corner of West &amp; Washington, and a menu built for sharing &mdash; seven days a week.</p>
+    <div class="cta-pair">
+      <div class="cta-item">
+        <a class="btn btn-primary" href="http://www.opentable.com/back-deck-reservations-boston?rtype=ism&amp;restref=99712" target="_blank" rel="noopener">Reserve a Table</a>
+        <span class="cta-note">Instant confirmation, no fee</span>
+      </div>
+      <div class="cta-item">
+        <a class="btn btn-outline" href="https://www.toasttab.com/back-deck-2-west-st/v3" target="_blank" rel="noopener">Order Online</a>
+        <span class="cta-note">Pickup &amp; delivery via Toast</span>
+      </div>
+    </div>
+    <div class="trust-strip">
+      <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>4.6 from 900+ diners</span>
+      <span class="trust-divider">&middot;</span>
+      <span data-open-status data-live="false">Checking today&rsquo;s hours&hellip;</span>
+    </div>
+    <div class="hero-quicklinks">
+      <a href="{{ url_for('menu_dinner') }}">View Menus</a>
+      <a href="{{ url_for('find_us') }}">Find Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="quicklink-grid">
+      <a class="quicklink reveal" href="{{ url_for('menu_dinner') }}">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v7a3 3 0 003 3h0a3 3 0 003-3V4M7 4v16M17 4c-1.7 0-3 2-3 5s1.3 5 3 5 3-2 3-5-1.3-5-3-5zM17 14v6"/></svg>
+        <strong>Menus</strong>
+        <span>Lunch, dinner, brunch, kids &amp; drinks</span>
+      </a>
+      <a class="quicklink reveal reveal-delay-1" href="http://www.opentable.com/back-deck-reservations-boston?rtype=ism&amp;restref=99712" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+        <strong>Reserve</strong>
+        <span>Book a table on OpenTable</span>
+      </a>
+      <a class="quicklink reveal reveal-delay-2" href="https://www.toasttab.com/back-deck-2-west-st/v3" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16l-1.5 9.5a2 2 0 01-2 1.5H7.5a2 2 0 01-2-1.5L4 4z"/><path d="M9 8v4M12 8v4M15 8v4"/></svg>
+        <strong>Order Online</strong>
+        <span>Pickup &amp; delivery via Toast</span>
+      </a>
+      <a class="quicklink reveal reveal-delay-3" href="{{ url_for('functions_page') }}">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2M13 7a4 4 0 100-8 4 4 0 000 8zM17 11a3 3 0 013 3v2M21 21v-3.5"/></svg>
+        <strong>Private Events</strong>
+        <span>Book the deck for your group</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Our Story</p>
+        <h2>Real fire. Real flavor.</h2>
+        <p class="lede" style="margin-top:1rem;">We burn hardwood charcoal, not gas &mdash; it burns cleaner and more evenly than raw wood, sears hotter than a gas flame, and gives every plate that unmistakable backyard-cookout flavor. Friends and family have been meeting on our deck for charcoal-grilled favorites, porch-perfect cocktails, and easy conversation since 2011.</p>
+        <div class="stat-row">
+          <div class="stat"><b>3</b><span>Charcoal broilers, hand-tended daily</span></div>
+          <div class="stat"><b>7</b><span>Days a week, lunch through dinner</span></div>
+          <div class="stat"><b>100&deg;</b><span>Hotter sear than a gas grill</span></div>
+        </div>
+        <a class="btn btn-ghost" href="{{ url_for('about') }}" style="margin-top:1.75rem;">Read our full story</a>
+      </div>
+      <div class="split-media">
+        <div class="media media-photo-fire media-wide reveal"></div>
+        <img class="split-media-accent media-portrait" style="width:46%; object-fit:cover;" src="/static/img/grills.jpg" alt="Close-up of Back Deck's charcoal grill and hardwood coals" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head-row">
+      <div class="section-head">
+        <p class="eyebrow">From the Grill</p>
+        <h2>A taste of the menu</h2>
+      </div>
+      <a class="btn btn-ghost" href="{{ url_for('menu_dinner') }}">View full menus</a>
+    </div>
+    <div class="grid grid-4">
+      <article class="card reveal">
+        <div class="card-media media media-photo-food1 media-wide"></div>
+        <h3>Strip Steak, Gaucho Cut</h3>
+        <p>Black Angus NY strip grilled to order, topped with sofrito butter, fries &amp; chimichurri. <strong>$37</strong></p>
+      </article>
+      <article class="card reveal reveal-delay-1">
+        <div class="card-media media media-photo-food2 media-wide"></div>
+        <h3>Boston Lobster Roll</h3>
+        <p>Lobster meat tossed with house tartar, celery &amp; scallions on a brioche bun. <strong>$36</strong></p>
+      </article>
+      <article class="card reveal reveal-delay-2">
+        <div class="card-media media media-photo-hero media-wide"></div>
+        <h3>BBQ Baby Back Ribs</h3>
+        <p>House barbecue sauce, mashed potatoes &amp; broccoli with teriyaki mayo. <strong>$26</strong></p>
+      </article>
+      <article class="card reveal reveal-delay-3">
+        <div class="card-media media media-photo-cocktail media-wide"></div>
+        <h3>Back Deck Mixed Grill</h3>
+        <p>Shrimp, andouille sausage &amp; steak tips with gumbo greens. <strong>$36</strong></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark on-dark">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Private Events</p>
+      <h2>Book the deck for your next gathering</h2>
+      <p class="lede" style="margin-inline:auto; margin-top:1rem;">Business luncheons, birthdays, graduations, cocktail parties &mdash; our upper deck, street-level deck and full buyout scale from an intimate 20 to a 175-person celebration.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal" style="background:var(--bg-deep-soft); border-color:var(--line-on-dark);">
+        <h3 style="color:var(--cream);">Upper Deck</h3>
+        <div class="capacity">
+          <div><b style="color:var(--ember-light);">40</b><span style="color:#cfc6b8;">seated</span></div>
+          <div><b style="color:var(--ember-light);">50&ndash;70</b><span style="color:#cfc6b8;">cocktail</span></div>
+        </div>
+      </div>
+      <div class="card reveal reveal-delay-1" style="background:var(--bg-deep-soft); border-color:var(--line-on-dark);">
+        <h3 style="color:var(--cream);">Washington Street Deck</h3>
+        <div class="capacity">
+          <div><b style="color:var(--ember-light);">20</b><span style="color:#cfc6b8;">seated</span></div>
+          <div><b style="color:var(--ember-light);">30</b><span style="color:#cfc6b8;">cocktail</span></div>
+        </div>
+      </div>
+      <div class="card reveal reveal-delay-2" style="background:var(--bg-deep-soft); border-color:var(--line-on-dark);">
+        <h3 style="color:var(--cream);">Full Restaurant Buyout</h3>
+        <div class="capacity">
+          <div><b style="color:var(--ember-light);">125</b><span style="color:#cfc6b8;">seated</span></div>
+          <div><b style="color:var(--ember-light);">175</b><span style="color:#cfc6b8;">cocktail</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a class="btn btn-primary" href="{{ url_for('functions_page') }}">Inquire About Private Events</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">As Seen In</p>
+      <h2>What Boston is saying</h2>
+    </div>
+    <div class="quote-strip">
+      <div class="quote-card reveal">
+        <span class="outlet">The Boston Globe</span>
+        <p>&ldquo;Everything tastes better on the grill.&rdquo;</p>
+      </div>
+      <div class="quote-card reveal reveal-delay-1">
+        <span class="outlet">NECN</span>
+        <p>&ldquo;Offering a complete cookout experience &hellip; a slightly-polished, home-style hangout.&rdquo;</p>
+      </div>
+      <div class="quote-card reveal reveal-delay-2">
+        <span class="outlet">Phantom Gourmet</span>
+        <p>&ldquo;A backyard barbecue right in the heart of&rdquo; downtown Boston.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a class="btn btn-ghost" href="{{ url_for('press') }}">Read more press</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}About | Back Deck Boston{% endblock %}
+{% block meta_description %}Back Deck offers backyard-style charcoal grilling in a laid-back Downtown Crossing setting, seven days a week. Learn why we burn hardwood charcoal, not gas.{% endblock %}
+
+{% set about_active = 'story' %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="hero-media media media-photo-fire"></div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">About Back Deck</p>
+    <h1>Backyard grilling, brought downtown.</h1>
+    <p class="lede">Back Deck offers professional backyard grilling in a laid-back city setting, seven days a week. Friends and family meet here for charcoal-grilled favorites inspired by casual cookouts, alongside porch-perfect cocktails, beer and wine.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "_about_subnav.html" %}
+    <div class="split">
+      <div>
+        <p class="eyebrow">Why Charcoal</p>
+        <h2>We burn hardwood charcoal. On purpose.</h2>
+        <p class="lede" style="margin-top:1.1rem;">Hardwood charcoal is made by partially burning oak and maple with limited oxygen, which eliminates the more volatile components &mdash; trapped hydrogen, methane and tars &mdash; for a more predictable, even burn and far less smoke than raw wood.</p>
+        <p style="margin-top:1.1rem; color:var(--ink-soft);">It also gives us real advantages over gas. Besides the pleasant smoky flavor, charcoal burns hotter &mdash; up to 100&deg; higher than a gas flame &mdash; so food sears better, delicate items like fish stick less, and the charred, &ldquo;grilled&rdquo; taste that comes from a hot grate and real smoke is much more pronounced.</p>
+        <p style="margin-top:1.1rem; color:var(--ink-soft);">A skilled griller also has more control over charcoal than gas: a charcoal fire has many levels of heat, so if you can read the fire, you can adjust the temperature under any piece of food just by moving it to a hotter or cooler spot on the grate.</p>
+      </div>
+      <div class="split-media">
+        <div class="media media-photo-grills media-wide reveal"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">Available Spaces</p>
+      <h2>Room for every occasion</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card event-card reveal">
+        <h3>Upper Deck</h3>
+        <div class="capacity">
+          <div><b>40</b><span>seated</span></div>
+          <div><b>50&ndash;70</b><span>cocktail</span></div>
+        </div>
+      </div>
+      <div class="card event-card reveal reveal-delay-1">
+        <h3>Washington Street Deck</h3>
+        <div class="capacity">
+          <div><b>20</b><span>seated</span></div>
+          <div><b>30</b><span>cocktail</span></div>
+        </div>
+      </div>
+      <div class="card event-card reveal reveal-delay-2">
+        <h3>Full Restaurant Buyout</h3>
+        <div class="capacity">
+          <div><b>125</b><span>seated</span></div>
+          <div><b>175</b><span>cocktail</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a class="btn btn-ghost" href="{{ url_for('functions_page') }}">See private events &amp; inquire</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">More About Back Deck</p>
+      <h2>In this section</h2>
+    </div>
+    <div class="grid grid-4">
+      <a class="quicklink reveal" href="{{ url_for('team') }}"><strong>Team</strong><span>The people behind the grill</span></a>
+      <a class="quicklink reveal reveal-delay-1" href="{{ url_for('press') }}"><strong>Press</strong><span>What Boston is saying</span></a>
+      <a class="quicklink reveal reveal-delay-2" href="{{ url_for('partners') }}"><strong>Partners</strong><span>Our Downtown Crossing neighbors</span></a>
+      <a class="quicklink reveal reveal-delay-3" href="{{ url_for('grills') }}"><strong>Meet the Grills</strong><span>Big Red, Monty &amp; Nelly</span></a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

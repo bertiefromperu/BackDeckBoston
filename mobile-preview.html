@@ -1,0 +1,258 @@
+<!--
+  Back Deck Boston — single-file mobile preview.
+  Self-contained (no external files besides Google Fonts) so it can be
+  AirDropped / texted / opened directly on a phone to pitch the design
+  before any hosting decision is made. The real, full site is the Flask
+  app in this same folder (run `python app.py`).
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back Deck | Charcoal Grill &amp; Backyard Cookout, Boston</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1917; --ink-soft: #4a443c; --ink-faint: #7a7267;
+    --bg: #f7f3ec; --bg-alt: #efe6d6; --bg-deep: #171310; --cream: #fbf8f2;
+    --line: #e3d9c6; --line-on-dark: #3a332b;
+    --ember: #bc5a34; --ember-dark: #96432a; --ember-light: #e08a5f; --ember-tint: #f4e2d6;
+    --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --radius-md: 10px; --radius-lg: 18px;
+    --shadow-card: 0 1px 2px rgba(28,25,23,.04), 0 8px 24px -12px rgba(28,25,23,.18);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.12; margin: 0 0 0.5rem; color: var(--ink); }
+  h1 { font-size: clamp(2rem, 8vw, 2.6rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 1.9rem); }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0 0 1rem; color: var(--ink-soft); }
+  a { color: inherit; }
+  .container { padding-inline: 1.25rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ember-dark); font-weight: 600; margin: 0 0 0.6rem; position: relative; padding-left: 1.1rem; }
+  .eyebrow::before { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 0.7rem; height: 2px; background: var(--ember); }
+
+  /* top bar */
+  .bar { position: sticky; top: 0; z-index: 20; background: rgba(247,243,236,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.25rem; }
+  .wordmark { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; letter-spacing: 0.02em; }
+  .wordmark span { display: block; font-family: var(--font-body); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+
+  /* buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.7rem 1.1rem; border-radius: 999px; font-weight: 600; font-size: 0.88rem; text-decoration: none; border: 1px solid transparent; white-space: nowrap; }
+  .btn-primary { background: var(--ember); color: var(--cream); }
+  .btn-outline { border-color: var(--ink); color: var(--ink); }
+  .btn-block { width: 100%; }
+  .btn-row { display: flex; gap: 0.6rem; }
+  .btn-row .btn { flex: 1; }
+
+  /* hero */
+  .hero { padding: 2.75rem 1.25rem 2.25rem; background: linear-gradient(160deg, var(--bg-alt), var(--bg) 60%); }
+  .hero .lede { font-size: 1.02rem; }
+  .media { position: relative; border-radius: var(--radius-lg); background-size: cover; background-position: center; overflow: hidden; }
+  .media-hero { aspect-ratio: 4/3; margin-bottom: 1.5rem; background-image: linear-gradient(150deg,#3a2c1f 0%,#1a1512 70%); }
+  .media-hero::after { content: "The Deck"; position: absolute; inset: auto 1rem 1rem auto; font-family: var(--font-display); font-style: italic; color: rgba(255,255,255,0.55); font-size: 0.8rem; }
+
+  section { padding: 2.25rem 0; }
+  .alt { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .dark { background: var(--bg-deep); color: var(--cream); }
+  .dark p { color: #cfc6b8; }
+  .dark h2 { color: var(--cream); }
+  .dark .eyebrow { color: var(--ember-light); }
+  .center { text-align: center; }
+
+  /* quicklinks */
+  .quick-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem; }
+  .quick-card { background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 1rem; text-decoration: none; display: block; box-shadow: var(--shadow-card); }
+  .quick-card b { display: block; font-family: var(--font-display); font-size: 1.02rem; color: var(--ink); margin-bottom: 0.2rem; }
+  .quick-card span { font-size: 0.8rem; color: var(--ink-faint); }
+
+  /* stats */
+  .stat-row { display: flex; gap: 1.5rem; margin: 1.25rem 0 0.5rem; }
+  .stat-row b { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--ember-dark); }
+  .stat-row span { font-size: 0.75rem; color: var(--ink-faint); }
+
+  /* menu highlight cards */
+  .dish { display: flex; justify-content: space-between; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
+  .dish:last-child { border-bottom: none; }
+  .dish .name { font-weight: 600; }
+  .dish .desc { font-size: 0.85rem; color: var(--ink-faint); margin-top: 0.15rem; }
+  .dish .price { font-family: var(--font-display); color: var(--ember-dark); white-space: nowrap; }
+
+  /* event cards */
+  .event-card { background: rgba(255,255,255,0.04); border: 1px solid var(--line-on-dark); border-radius: var(--radius-md); padding: 1.1rem; margin-bottom: 0.8rem; }
+  .event-card h3 { color: var(--cream); margin-bottom: 0.3rem; }
+  .cap-row { display: flex; gap: 1.5rem; margin-top: 0.6rem; font-size: 0.85rem; }
+  .cap-row b { display: block; font-family: var(--font-display); color: var(--ember-light); font-size: 1.1rem; }
+
+  /* press */
+  .press-quote { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; line-height: 1.4; text-align: center; }
+  .press-quote cite { display: block; margin-top: 0.75rem; font-family: var(--font-body); font-style: normal; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ember-dark); }
+
+  /* footer */
+  footer { background: var(--bg-deep); color: #cfc6b8; padding: 2.25rem 1.25rem 6rem; }
+  footer h4 { color: var(--cream); font-family: var(--font-body); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+  footer address { font-style: normal; line-height: 1.9; margin-bottom: 1.5rem; }
+  footer a { text-decoration: underline; color: var(--cream); }
+  .hours-row { display: flex; justify-content: space-between; gap: 1rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line-on-dark); font-size: 0.88rem; }
+  .hours-row:last-child { border-bottom: none; }
+
+  /* sticky bottom cta */
+  .cta-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: rgba(28,25,23,0.94); backdrop-filter: blur(8px); padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom)); display: flex; gap: 0.6rem; }
+  .cta-bar .btn-outline { border-color: rgba(255,255,255,0.5); color: var(--cream); }
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+  @media (min-width: 480px) {
+    .container, .hero, section { padding-inline: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wordmark">BACK DECK<span>Boston &middot; Est. 2011</span></div>
+  <a class="btn btn-primary" style="padding:0.55rem 0.9rem; font-size:0.8rem;" href="http://www.opentable.com/back-deck-reservations-boston?rtype=ism&amp;restref=99712" target="_blank" rel="noopener">Reserve</a>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">2 West St. &middot; Corner of West &amp; Washington</p>
+    <h1>Backyard grilling,<br>downtown Boston.</h1>
+    <div class="media media-hero"></div>
+    <p class="lede">Charcoal fire, backyard-style cooking and a laid-back deck in the middle of Downtown Crossing &mdash; open seven days a week for lunch, brunch and dinner.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="http://www.opentable.com/back-deck-reservations-boston?rtype=ism&amp;restref=99712" target="_blank" rel="noopener">Reserve a Table</a>
+      <a class="btn btn-outline" href="https://www.toasttab.com/back-deck-2-west-st/v3" target="_blank" rel="noopener">Order Online</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="eyebrow">Quick Links</p>
+    <h2>Everything, one tap away</h2>
+    <div class="quick-grid">
+      <a class="quick-card reveal" href="#menu"><b>Menus</b><span>Lunch, dinner, brunch &amp; drinks</span></a>
+      <a class="quick-card reveal" href="http://www.opentable.com/back-deck-reservations-boston?rtype=ism&amp;restref=99712" target="_blank" rel="noopener"><b>Reserve</b><span>Book on OpenTable</span></a>
+      <a class="quick-card reveal" href="https://www.toasttab.com/back-deck-2-west-st/v3" target="_blank" rel="noopener"><b>Order Online</b><span>Pickup via Toast</span></a>
+      <a class="quick-card reveal" href="#functions"><b>Private Events</b><span>Book the deck</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <p class="eyebrow">Our Story</p>
+    <h2>Real fire. Real flavor.</h2>
+    <p>We burn hardwood charcoal, not gas &mdash; a cleaner, more even burn than an open wood fire, with a hotter, more controllable sear than any gas grill can offer. That&rsquo;s the whole philosophy: everything tastes better cooked over live fire.</p>
+    <div class="stat-row">
+      <div><b>3</b><span>grills, each a specialist</span></div>
+      <div><b>7</b><span>days a week</span></div>
+      <div><b>100&deg;</b><span>hotter than gas</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <p class="eyebrow">A Taste of the Menu</p>
+    <h2>From the grill</h2>
+    <div style="margin-top:1rem;">
+      <div class="dish reveal">
+        <div><div class="name">Strip Steak, Gaucho Cut</div><div class="desc">Charcoal-grilled, chimichurri</div></div>
+        <div class="price">$37</div>
+      </div>
+      <div class="dish reveal">
+        <div><div class="name">Boston Lobster Roll</div><div class="desc">Butter or mayo, choice of side</div></div>
+        <div class="price">$36</div>
+      </div>
+      <div class="dish reveal">
+        <div><div class="name">BBQ Baby Back Ribs</div><div class="desc">Half rack, house BBQ sauce</div></div>
+        <div class="price">$26</div>
+      </div>
+      <div class="dish reveal">
+        <div><div class="name">Back Deck Mixed Grill</div><div class="desc">Chef&rsquo;s selection off the fire</div></div>
+        <div class="price">$36</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="functions" class="dark">
+  <div class="container">
+    <p class="eyebrow">Private Events</p>
+    <h2>Book the deck for your next event</h2>
+    <p>Business luncheons, birthdays, graduations, cocktail parties &mdash; three spaces, or the whole restaurant.</p>
+    <div style="margin-top:1.25rem;">
+      <div class="event-card reveal">
+        <h3>Upper Deck</h3>
+        <div class="cap-row"><div><b>40</b>seated</div><div><b>50&ndash;70</b>cocktail</div></div>
+      </div>
+      <div class="event-card reveal">
+        <h3>Washington Street Deck</h3>
+        <div class="cap-row"><div><b>20</b>seated</div><div><b>30</b>cocktail</div></div>
+      </div>
+      <div class="event-card reveal">
+        <h3>Full Restaurant Buyout</h3>
+        <div class="cap-row"><div><b>125</b>seated</div><div><b>175</b>cocktail</div></div>
+      </div>
+    </div>
+    <a class="btn btn-primary btn-block" style="margin-top:0.5rem;" href="mailto:info@backdeckboston.com?subject=Private%20Event%20Inquiry">Inquire About Private Events</a>
+  </div>
+</section>
+
+<section class="center">
+  <div class="container">
+    <p class="press-quote">&ldquo;Everything tastes better on the grill.&rdquo;<cite>The Boston Globe</cite></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wordmark" style="margin-bottom:1.25rem;">BACK DECK</div>
+  <h4>Visit</h4>
+  <address>
+    2 West St., Boston, MA<br>
+    Corner of West &amp; Washington<br>
+    P: <a href="tel:6176700320">617-670-0320</a><br>
+    <a href="mailto:info@backdeckboston.com">info@backdeckboston.com</a>
+  </address>
+  <h4>Hours</h4>
+  <div>
+    <div class="hours-row"><span>Lunch</span><span>Mon&ndash;Fri, 11:30&ndash;4:00</span></div>
+    <div class="hours-row"><span>Brunch</span><span>Sat &amp; Sun, 11:30&ndash;3:00</span></div>
+    <div class="hours-row"><span>Dinner &mdash; Sun</span><span>3:00&ndash;8:00</span></div>
+    <div class="hours-row"><span>Dinner &mdash; Mon&ndash;Wed</span><span>4:00&ndash;9:00</span></div>
+    <div class="hours-row"><span>Dinner &mdash; Thu &amp; Fri</span><span>4:00&ndash;10:00</span></div>
+    <div class="hours-row"><span>Dinner &mdash; Sat</span><span>3:00&ndash;10:00</span></div>
+  </div>
+</footer>
+
+<div class="cta-bar">
+  <a class="btn btn-outline btn-block" href="http://www.opentable.com/back-deck-reservations-boston?rtype=ism&amp;restref=99712" target="_blank" rel="noopener">Reserve</a>
+  <a class="btn btn-primary btn-block" href="https://www.toasttab.com/back-deck-2-west-st/v3" target="_blank" rel="noopener">Order Online</a>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var els = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window && els.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15, rootMargin: "0px 0px -30px 0px" });
+      els.forEach(function (el) { io.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+  });
+</script>
+</body>
+</html>

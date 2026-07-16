@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% set menu_active = 'lunch' %}
+
+{% block title %}Lunch Menu | Back Deck Boston{% endblock %}
+{% block meta_description %}Back Deck's lunch menu: charcoal-grilled burgers, sandwiches, salads and lunch plates in Downtown Crossing, Boston. Served Monday&ndash;Friday, 11:30&ndash;4:00.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="hero-media media media-photo-food1">
+    <img src="{{ url_for('static', filename='img/Lunch.jpeg') }}" alt="Backyard burgers and sandwiches served at Back Deck for lunch" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Served Mon&ndash;Fri, 11:30&ndash;4:00</p>
+    <h1>Lunch</h1>
+    <p class="lede">Backyard burgers, hand-carved sandwiches and off-the-grill plates, built for a quick or leisurely midday break.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "_menu_toolbar.html" %}
+
+    <div class="menu-legend">
+      <span><span class="tag">GF</span> Gluten free or available gluten free</span>
+      <span>* Cooked to order &mdash; consumption of raw or undercooked items may increase your risk of foodborne illness</span>
+      <span>18% gratuity added to parties of 6 or more</span>
+    </div>
+
+    <div class="menu-columns">
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Starters &amp; Small Plates</h3>
+
+        <div class="menu-item">
+          <div><div class="menu-item-name">Seasonal Soup</div><div class="menu-item-desc">Please ask your server for today&rsquo;s soup</div></div>
+          <div class="menu-item-price">9</div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Creamy Hummus <span class="tag">GF w/o pita &middot; vegan</span></div><div class="menu-item-desc">Balsamic roasted onion, carrots &amp; pita chips</div></div>
+          <div class="menu-item-price">12</div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Grilled Wings</div><div class="menu-item-desc">Choice of chipotle lime butter, gorgonzola dressing <span class="tag">GF</span> &mdash; or sweet chili glaze, peanut sauce</div></div>
+          <div class="menu-item-price">14</div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Burrata Caprese</div><div class="menu-item-desc">Fresh tomatoes &amp; basil, balsamic glaze, house crostini</div></div>
+          <div class="menu-item-price">17</div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Andouille Sausage &amp; Mashed</div><div class="menu-item-desc">Gumbo greens &amp; mashed potatoes</div></div>
+          <div class="menu-item-price">14</div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Lobster Mac &amp; Cheese</div></div>
+          <div class="menu-item-price">23</div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Lobster and Crab Tower <span class="tag">GF</span></div><div class="menu-item-desc">House tartar sauce with avocado &amp; crostini</div></div>
+          <div class="menu-item-price">23</div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Mexican Street Corn <span class="tag">GF</span></div><div class="menu-item-desc">Grilled corn on the cob, creamy chili lime sauce, cotija cheese, tajin &amp; lime</div></div>
+          <div class="menu-item-price">15</div>
+        </div>
+        <div class="menu-item">
+          <div><div class="menu-item-name">Grilled Quesadilla</div><div class="menu-item-desc">Red pepper, onions, cheddar &amp; pepperjack, sour cream, salsa &amp; guacamole. Add chicken 6 &middot; shrimp 9 &middot; pulled pork 5</div></div>
+          <div class="menu-item-price">15</div>
+        </div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Salads</h3>
+        <div class="menu-item"><div><div class="menu-item-name">Garden Salad <span class="tag">GF</span></div><div class="menu-item-desc">Choice of house creamy Dijon, ranch, balsamic, gorgonzola or Greek dressing &mdash; all GF</div></div><div class="menu-item-price">13</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Classic Caesar* <span class="tag">GF w/o croutons</span></div><div class="menu-item-desc">Romaine, parmesan, house croutons &amp; homemade Caesar dressing</div></div><div class="menu-item-price">13</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Cobb Salad <span class="tag">GF</span></div><div class="menu-item-desc">Sliced avocado, crispy bacon, goat cheese, tomato &amp; hard-boiled egg over greens with creamy Dijon</div></div><div class="menu-item-price">15</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Thai-Style Grilled Chicken</div><div class="menu-item-desc">Sweet chili-glazed chicken, crisp vegetables, greens, lemon-cumin vinaigrette, peanut sauce</div></div><div class="menu-item-price">19</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Greek Salad <span class="tag">GF</span></div><div class="menu-item-desc">Cucumber, cherry tomatoes, Kalamata olives, red onion &amp; feta over romaine</div></div><div class="menu-item-price">15</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">BBQ Steak Tips* Spinach Salad <span class="tag">GF</span></div><div class="menu-item-desc">Crumbled gorgonzola, cherry tomatoes &amp; grilled red onion over baby spinach, balsamic vinaigrette</div></div><div class="menu-item-price">28</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Watermelon Salad <span class="tag">GF w/o orzo</span></div><div class="menu-item-desc">Cubed watermelon, feta, orzo, arugula &amp; onions, lemon-cumin vinaigrette</div></div><div class="menu-item-price">15</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Summer Salad <span class="tag">GF</span></div><div class="menu-item-desc">Fennel, arugula, onions, orange &amp; apple slices, creamy Dijon</div></div><div class="menu-item-price">15</div></div>
+        <p class="menu-item-note">Add to any salad: grilled chicken 6 &middot; grilled salmon* 8 &middot; grilled shrimp 9 &middot; grilled steak tips* 14</p>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Backyard Burgers</h3>
+        <p class="menu-group-note">Served with fries or slaw &middot; UDI&rsquo;s gluten-free buns available +3</p>
+        <div class="menu-item"><div><div class="menu-item-name">Beef*, Turkey or Impossible&reg; <span class="tag">GF/Vegan</span></div><div class="menu-item-desc">Lettuce, tomato &amp; onions. Add cheese +2 &mdash; American, cheddar, pepper jack, Swiss or provolone</div></div><div class="menu-item-price">15</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mexicali Burger*</div><div class="menu-item-desc">Pepper jack, avocado, green chili salsa, chipotle mayo on the side</div></div><div class="menu-item-price">20</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Western BBQ Burger*</div><div class="menu-item-desc">BBQ sauce, American cheese, bacon, jalape&ntilde;o slices, ranch on the side</div></div><div class="menu-item-price">20</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Aloha Burger* <span class="tag">GF w/o teriyaki mayo</span></div><div class="menu-item-desc">Provolone, grilled pineapple &amp; red onion, teriyaki mayo on the side</div></div><div class="menu-item-price">20</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Matterhorn Burger*</div><div class="menu-item-desc">Swiss cheese, bacon &amp; mushroom garni</div></div><div class="menu-item-price">20</div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Sides</h3>
+        <p class="menu-group-note">7 each</p>
+        <div class="menu-item"><div class="menu-item-name">Mashed Potatoes <span class="tag">GF</span></div></div>
+        <div class="menu-item"><div class="menu-item-name">House Fries <span class="tag">GF</span></div></div>
+        <div class="menu-item"><div class="menu-item-name">Rice &amp; Black Beans <span class="tag">GF/Vegan</span></div></div>
+        <div class="menu-item"><div class="menu-item-name">Coleslaw <span class="tag">GF</span></div></div>
+        <div class="menu-item"><div class="menu-item-name">Grilled Broccoli <span class="tag">GF</span></div></div>
+        <div class="menu-item"><div class="menu-item-name">Grilled Zucchini <span class="tag">GF</span></div></div>
+        <div class="menu-item"><div class="menu-item-name">Cornbread &amp; Maple Butter</div></div>
+        <div class="menu-item"><div class="menu-item-name">Moroccan Carrots <span class="tag">GF</span></div></div>
+        <div class="menu-item"><div class="menu-item-name">Gumbo Greens with Tasso Ham</div></div>
+        <div class="menu-item"><div class="menu-item-name">Fresh Fruit with Yogurt Dipping Sauce <span class="tag">GF</span></div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Sandwiches</h3>
+        <p class="menu-group-note">Served with fries or slaw &middot; UDI&rsquo;s gluten-free buns available +3</p>
+        <div class="menu-item"><div><div class="menu-item-name">North Carolina Style Pulled Pork</div><div class="menu-item-desc">Topped with slaw on a toasted bun, BBQ sauce on the side</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Quarter Pound Hot Dog</div><div class="menu-item-desc">Toasted brioche bun, sauerkraut or sweet &amp; spicy red pepper relish</div></div><div class="menu-item-price">12</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grilled Cheese</div><div class="menu-item-desc">American, provolone &amp; pepper jack</div></div><div class="menu-item-price">12</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Smoked Turkey Reuben</div><div class="menu-item-desc">Swiss cheese, sauerkraut &amp; Russian dressing on rye</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grilled Chicken Breast</div><div class="menu-item-desc">Lettuce, tomato, red onion &amp; house mayo. Make it Mexicali, Western BBQ, Aloha or Matterhorn +19</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Smoked Turkey Club</div><div class="menu-item-desc">Apple-smoked bacon, lettuce, tomato &amp; house mayo</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Cubano</div><div class="menu-item-desc">Spicy pork loin or smoked turkey, ham, Swiss, mustard, chipotle mayo, pickles</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grilled Meatloaf</div><div class="menu-item-desc">Cranberry-rhubarb chutney, lettuce, tomato &amp; house mayo on the side</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Chicken Caprese <span class="tag">GF w/ UDI&rsquo;s bun +3</span></div><div class="menu-item-desc">Mozzarella, lettuce, tomato, onions &amp; pesto, side of fries &amp; teriyaki mayo</div></div><div class="menu-item-price">19</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Boston Lobster Roll</div><div class="menu-item-desc">Lobster tossed with house tartar, celery &amp; scallions on brioche, fries &amp; coleslaw</div></div><div class="menu-item-price">36</div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Lunch Plates</h3>
+        <div class="menu-item"><div><div class="menu-item-name">Pulled Pork Tacos <span class="tag">GF</span></div><div class="menu-item-desc">Cuban-style pork in corn tortillas, red cabbage slaw, black beans &amp; rice, salsa &amp; guacamole</div></div><div class="menu-item-price">24</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grilled Moroccan Chicken Skewers <span class="tag">GF</span></div><div class="menu-item-desc">Grilled onion, tomato, zucchini, small salad, basmati rice, white BBQ sauce</div></div><div class="menu-item-price">24</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Back Deck Mixed Grill Platter <span class="tag">GF w/o gumbo greens</span></div><div class="menu-item-desc">Shrimp, andouille sausage, steak tips, gumbo greens &amp; Moroccan glazed carrots</div></div><div class="menu-item-price">36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Jane&rsquo;s Curried Grilled Meatloaf</div><div class="menu-item-desc">Balsamic roasted onions, mashed potatoes, Moroccan carrots, cranberry-rhubarb chutney &amp; mushroom garni</div></div><div class="menu-item-price">22</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">BBQ Baby Back Ribs</div><div class="menu-item-desc">House barbecue sauce, mashed potatoes &amp; broccoli, teriyaki mayo on the side</div></div><div class="menu-item-price">26</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grilled Garlicky Sirloin Tips* <span class="tag">GF</span></div><div class="menu-item-desc">Mashed potatoes, broccoli, tomato-caper ketchup</div></div><div class="menu-item-price">36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grilled Salmon* with Teriyaki Glaze <span class="tag">GF w/o teriyaki</span></div><div class="menu-item-desc">Basmati rice, blanched green beans, sesame vinaigrette</div></div><div class="menu-item-price">32</div></div>
+      </div>
+
+    </div>
+
+    <p class="menu-item-note">WIFI password: backdecktwowest</p>
+
+    <div class="menu-download">
+      <div>
+        <h4>Prefer the print version?</h4>
+        <p style="color:var(--ink-soft); font-size:0.9rem;">Download the PDF to view or print the full lunch menu.</p>
+      </div>
+      <a class="btn btn-outline btn-sm" href="https://www.backdeckboston.com/sites/default/files/2026.06%20BD%20Lunch.pdf" target="_blank" rel="noopener">Download PDF</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

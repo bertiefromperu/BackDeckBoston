@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Partners | Back Deck Boston{% endblock %}
+{% block meta_description %}Back Deck's Downtown Crossing neighbors and partners: the Boston Opera House, Godfrey Hotel, Ritz-Carlton Boston Common, Boston Ballet and more.{% endblock %}
+
+{% set about_active = 'partners' %}
+{% block content %}
+
+<section class="page-hero page-hero--compact">
+  <div class="container page-hero-content">
+    <p class="eyebrow">About &middot; Partners</p>
+    <h1>Our Downtown Crossing neighbors</h1>
+    <p class="lede">Back Deck sits at the center of Boston&rsquo;s theatre, hotel and cultural district &mdash; we&rsquo;re proud to partner with the venues that bring people through the neighborhood.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "_about_subnav.html" %}
+    <div class="partner-grid">
+      <div class="partner-item reveal">
+        <h4>Boston Opera House</h4>
+        <p>Hosts the region&rsquo;s most active program of top touring Broadway shows, Boston Ballet performances and other cultural presentations.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>The Godfrey Hotel Boston</h4>
+        <p>A luxury downtown hotel welcoming guests with modern accommodations and service.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>Downtown Boston Business Improvement District</h4>
+        <p>A private, non-profit corporation created and maintained by neighborhood property owners.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>The Ritz-Carlton, Boston Common</h4>
+        <p>An upscale hotel offering contemporary sophistication and classic charm.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>NineZero</h4>
+        <p>A boutique luxury hotel highly ranked for downtown Boston accommodations.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>Hyatt Regency Boston</h4>
+        <p>A newly renovated hotel offering city experiences near the Freedom Trail and Faneuil Hall.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>AMC Loews Boston Common 19</h4>
+        <p>A multiplex cinema offering movie tickets and showtimes just steps away.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>The Orpheum Theatre</h4>
+        <p>A historic performance venue originally built in 1852.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>Boston Ballet</h4>
+        <p>One of the leading dance companies in the world.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>Broadway in Boston</h4>
+        <p>Bringing world-class Broadway touring shows to historic Boston theatres.</p>
+      </div>
+      <div class="partner-item reveal">
+        <h4>ArtsEmerson Paramount Center</h4>
+        <p>A restored 1930s cinema palace operated by Emerson College.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+<div class="subnav">
+  <a href="{{ url_for('about') }}" class="{{ 'active' if about_active == 'story' }}">Our Story</a>
+  <a href="{{ url_for('team') }}" class="{{ 'active' if about_active == 'team' }}">Team</a>
+  <a href="{{ url_for('press') }}" class="{{ 'active' if about_active == 'press' }}">Press</a>
+  <a href="{{ url_for('partners') }}" class="{{ 'active' if about_active == 'partners' }}">Partners</a>
+  <a href="{{ url_for('grills') }}" class="{{ 'active' if about_active == 'grills' }}">Meet the Grills</a>
+</div>

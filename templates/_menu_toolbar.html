@@ -1,0 +1,7 @@
+<div class="menu-toolbar">
+  <a href="{{ url_for('menu_brunch') }}" class="{{ 'active' if menu_active == 'brunch' }}">Brunch</a>
+  <a href="{{ url_for('menu_lunch') }}" class="{{ 'active' if menu_active == 'lunch' }}">Lunch</a>
+  <a href="{{ url_for('menu_dinner') }}" class="{{ 'active' if menu_active == 'dinner' }}">Dinner</a>
+  <a href="{{ url_for('menu_beverage') }}" class="{{ 'active' if menu_active == 'beverage' }}">Beverage</a>
+  <a href="{{ url_for('menu_kids') }}" class="{{ 'active' if menu_active == 'kids' }}">Kid&rsquo;s Menu</a>
+</div>

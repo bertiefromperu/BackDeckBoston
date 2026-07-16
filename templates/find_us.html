@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Find Us | Back Deck Boston{% endblock %}
+{% block meta_description %}Back Deck is located at 2 West St., Boston, MA, on the corner of West & Washington in Downtown Crossing. Hours, directions and parking info.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="hero-media media media-photo-map"></div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Find Us</p>
+    <h1>2 West St., Downtown Crossing</h1>
+    <p class="lede">Right on the corner of West &amp; Washington, steps from Downtown Crossing, the Opera House and Boston Common.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split reverse">
+      <div>
+        <p class="eyebrow">Directions</p>
+        <h2>Getting here</h2>
+        <div class="directions-list" style="margin-top:1.5rem;">
+          <div class="reveal">
+            <span class="num">01</span><strong>Address</strong>
+            <p style="color:var(--ink-soft); margin-top:0.3rem;">2 West St., Boston, MA 02111 &mdash; corner of West &amp; Washington Street.</p>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <span class="num">02</span><strong>By T</strong>
+            <p style="color:var(--ink-soft); margin-top:0.3rem;">A short walk from Downtown Crossing (Orange/Red Line) and Park Street (Green/Red Line) stations.</p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <span class="num">03</span><strong>Parking</strong>
+            <p style="color:var(--ink-soft); margin-top:0.3rem;">We offer discounted parking validation at the Lafayette Garage on Avenue de Lafayette, next to the Hyatt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="split-media">
+        <div class="map-embed media-wide">
+          <iframe
+            src="https://www.google.com/maps?q=2+West+St,+Boston,+MA+02111&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map to Back Deck at 2 West St., Boston, MA"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container" style="max-width:640px;">
+    <div class="section-head center">
+      <p class="eyebrow">Hours</p>
+      <h2>When we&rsquo;re open</h2>
+    </div>
+    <dl class="hours-list card">
+      <div class="hours-row">
+        <dt>Lunch</dt>
+        <dd>Mon&ndash;Fri, 11:30am &ndash; 4:00pm</dd>
+      </div>
+      <div class="hours-row">
+        <dt>Brunch</dt>
+        <dd>Sat &amp; Sun, 11:30am &ndash; 3:00pm</dd>
+      </div>
+      <div class="hours-row">
+        <dt>Dinner &mdash; Sun</dt>
+        <dd>3:00pm &ndash; 8:00pm</dd>
+      </div>
+      <div class="hours-row">
+        <dt>Dinner &mdash; Mon&ndash;Wed</dt>
+        <dd>4:00pm &ndash; 9:00pm</dd>
+      </div>
+      <div class="hours-row">
+        <dt>Dinner &mdash; Thu &amp; Fri</dt>
+        <dd>4:00pm &ndash; 10:00pm</dd>
+      </div>
+      <div class="hours-row" style="border-bottom:none;">
+        <dt>Dinner &mdash; Sat</dt>
+        <dd>3:00pm &ndash; 10:00pm</dd>
+      </div>
+    </dl>
+    <p style="text-align:center; margin-top:2rem;">
+      <a class="btn btn-primary" href="http://www.opentable.com/back-deck-reservations-boston?rtype=ism&amp;restref=99712" target="_blank" rel="noopener">Reserve a Table</a>
+    </p>
+  </div>
+</section>
+
+{% endblock %}

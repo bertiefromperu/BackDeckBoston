@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Press | Back Deck Boston{% endblock %}
+{% block meta_description %}What Boston media is saying about Back Deck: NECN, the Boston Globe, Eater Boston, Phantom Gourmet and more.{% endblock %}
+
+{% set about_active = 'press' %}
+{% block content %}
+
+<section class="page-hero page-hero--compact">
+  <div class="container page-hero-content">
+    <p class="eyebrow">About &middot; Press</p>
+    <h1>What Boston is saying</h1>
+    <p class="lede">A selection of press coverage since Back Deck opened in Downtown Crossing.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "_about_subnav.html" %}
+    <div style="max-width:760px;">
+
+    <div class="press-item reveal">
+      <span class="outlet">The Boston Globe</span>
+      <h3>In Downtown Crossing, Back Deck Brings the Cookout Indoors</h3>
+      <p>&ldquo;Everything tastes better on the grill&rdquo; &mdash; on Back Deck&rsquo;s core grilling concept and backyard barbecue atmosphere.</p>
+    </div>
+
+    <div class="press-item reveal">
+      <span class="outlet">NECN</span>
+      <h3>Destination: Back Deck</h3>
+      <p>&ldquo;Offering a complete cookout experience, Back Deck in Downtown Crossing gives city-goers a slightly-polished, home-style hangout.&rdquo;</p>
+    </div>
+
+    <div class="press-item reveal">
+      <span class="outlet">Phantom Gourmet</span>
+      <h3>A Backyard Barbecue, Downtown</h3>
+      <p>Characterizes Back Deck as &ldquo;a backyard barbecue right in the heart of&rdquo; downtown Boston, featuring grilled burgers and spiked punch.</p>
+    </div>
+
+    <div class="press-item reveal">
+      <span class="outlet">Eater Boston</span>
+      <h3>New Specials at Back Deck; Boston Now Has Crabbies</h3>
+      <p>Notes the restaurant&rsquo;s grilling-focused menu since its summer opening.</p>
+    </div>
+
+    <div class="press-item reveal">
+      <span class="outlet">Examiner</span>
+      <h3>Boston Ballet Nutcracker and the Back Deck</h3>
+      <p>On the restaurant&rsquo;s theatrical outdoor deck dining concept at Washington &amp; West streets.</p>
+    </div>
+
+    <div class="press-item reveal">
+      <span class="outlet">Pop Goes Boston</span>
+      <h3>Back Deck Introduces New Summertime Menu</h3>
+      <p>Highlights seasonal offerings including burgers, hot dogs, beer buckets and cocktail pitchers.</p>
+    </div>
+
+    <div class="press-item reveal">
+      <span class="outlet">Boston Brunchers</span>
+      <h3>Brunching at the Back Deck</h3>
+      <p>On the restaurant&rsquo;s use of wood and greenery to create an outdoor atmosphere indoors.</p>
+    </div>
+
+    <div class="press-item reveal">
+      <span class="outlet">Lost in LaliLand</span>
+      <h3>Restaurant Review: Back Deck Boston</h3>
+      <p>A review of the restaurant, located at the corner of Washington &amp; West Streets in downtown Boston.</p>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

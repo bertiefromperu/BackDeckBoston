@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% set menu_active = 'beverage' %}
+
+{% block title %}Beverage Menu | Back Deck Boston{% endblock %}
+{% block meta_description %}Back Deck's beverage menu: craft cocktails from New England distillers, local drafts, bottled beer and a curated wine list.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="hero-media media media-photo-cocktail">
+    <img src="{{ url_for('static', filename='img/Beverage.png') }}" alt="Cocktails and drinks served at Back Deck" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+  </div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Porch-Perfect Pours</p>
+    <h1>Beverage &amp; Wine</h1>
+    <p class="lede">Cocktails built around New England distillers, a rotating draft list, and a wine list chosen to pair with the grill. Most cocktails are available in pitchers for sharing.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include "_menu_toolbar.html" %}
+
+    <div class="menu-columns">
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Cocktails</h3>
+        <p class="menu-group-note">Glass / pitcher &mdash; most cocktails available in pitchers for sharing</p>
+        <div class="menu-item"><div><div class="menu-item-name">Ginger Arnold Palmer</div><div class="menu-item-desc">House-made lemonade &amp; iced tea, Berkshire Bourbon (MA), Domaine de Canton ginger</div></div><div class="menu-item-price">14 / 56</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Spiced Rum Punch</div><div class="menu-item-desc">Spice-infused Ragged Mountain Rum (MA), OJ, pineapple, lime, grenadine, Gosling&rsquo;s Dark float</div></div><div class="menu-item-price">14 / 56</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Elderflower Margarita</div><div class="menu-item-desc">El Jimador tequila, St Elder elderflower liqueur, fresh lime, ruby red grapefruit juice</div></div><div class="menu-item-price">14 / 56</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Back Deck Manhattan</div><div class="menu-item-desc">Berkshire Bourbon (MA) infused with figs &amp; vanilla beans, chocolate bitters, sweet vermouth</div></div><div class="menu-item-price">16</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Cape Cod Fizz</div><div class="menu-item-desc">Triple 8 Cranberry Vodka (MA), St. Elder elderflower liqueur, lime &amp; soda</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Spiked Strawberry Lemonade</div><div class="menu-item-desc">Strawberry vodka, amaretto, grapefruit &amp; lemonade</div></div><div class="menu-item-price">14 / 56</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Mule Variation</div><div class="menu-item-desc">Montelobos mezcal, Lejay Cassis, lime juice, ginger beer, blackberries</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Espresso Martini</div><div class="menu-item-desc">Triple 8 Vanilla (MA), St. Elder Espresso, cold brew concentrate</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Berkshire Summer</div><div class="menu-item-desc">Cucumber-infused Greylock Gin (MA), lemon, sugar</div></div><div class="menu-item-price">15</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Blueberry Thyme Smash</div><div class="menu-item-desc">Cold River Blueberry vodka (ME), lemon, thyme, muddled blueberries, ginger ale</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Verde Margarita</div><div class="menu-item-desc">El Jimador, Montelobos mezcal, Ancho Reyes Verde chili liqueur, lemon, pineapple, cumin-salt rim</div></div><div class="menu-item-price">14</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Seasonal Sangria</div><div class="menu-item-desc">Riesling, limoncello, strawberry pur&eacute;e</div></div><div class="menu-item-price">12 / 48</div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Soft Drinks</h3>
+        <div class="menu-item"><div class="menu-item-name">Fountain Soda</div><div class="menu-item-price">4.25</div></div>
+        <div class="menu-item"><div class="menu-item-name">Root Beer or Cream Soda</div><div class="menu-item-price">6.00</div></div>
+        <div class="menu-item"><div class="menu-item-name">Unsweetened Iced Tea</div><div class="menu-item-price">4.00</div></div>
+        <div class="menu-item"><div class="menu-item-name">Lemonade</div><div class="menu-item-price">4.25</div></div>
+        <div class="menu-item"><div class="menu-item-name">Orange, Cranberry or Apple Juice</div><div class="menu-item-price">5.00</div></div>
+        <div class="menu-item"><div class="menu-item-name">Saratoga Spring &mdash; Still or Sparkling</div><div class="menu-item-price">6.00</div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Drafts</h3>
+        <p class="menu-group-note">Pint / 23oz pilsner / 60oz pitcher</p>
+        <div class="menu-item"><div><div class="menu-item-name">Allagash White Ale, ME</div><div class="menu-item-desc">Unfiltered Belgian white, coriander &amp; citrus</div></div><div class="menu-item-price">10 / 14 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Schilling Alexandr, NH</div><div class="menu-item-desc">Czech style pilsner</div></div><div class="menu-item-price">10 / 14 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Night Shift Whirlpool Pale Ale, MA</div><div class="menu-item-desc">Juicy &amp; hazy New England pale ale</div></div><div class="menu-item-price">10 / 14 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Narragansett Lager, RI</div><div class="menu-item-desc">Perfect for swimmin&rsquo; with bowlegged women</div></div><div class="menu-item-price">7 / 10 / 26</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Wachusett Blueberry Ale, MA</div><div class="menu-item-desc">Balanced blueberry wheat ale</div></div><div class="menu-item-price">10 / 14 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Smuttynose Finest Kind IPA, NH</div><div class="menu-item-desc">Old-school citrus &amp; bitter hops, solid malt backbone</div></div><div class="menu-item-price">10 / 14 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Fiddlehead IPA, VT</div><div class="menu-item-desc">Hazy, citrusy NEIPA</div></div><div class="menu-item-price">10 / 14 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Deciduous Lollipop Forest Raspberry Sour, NH</div><div class="menu-item-desc">Fruited sour ale with milk sugar &amp; raspberries</div></div><div class="menu-item-price">10 / 14 / 36</div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Bottled &amp; Canned</h3>
+        <div class="menu-item"><div class="menu-item-name">Widowmaker Blue Comet IPA, MA (16oz)</div><div class="menu-item-price">12</div></div>
+        <div class="menu-item"><div class="menu-item-name">Sam Adams Summer Ale, MA (12oz)</div><div class="menu-item-price">9</div></div>
+        <div class="menu-item"><div class="menu-item-name">East Rock Citrus Kolsch, CT (12oz)</div><div class="menu-item-price">9</div></div>
+        <div class="menu-item"><div class="menu-item-name">True North Northern Haze, MA (16oz)</div><div class="menu-item-price">12</div></div>
+        <div class="menu-item"><div class="menu-item-name">Lamplighter Rabbit Rabbit, MA (16oz)</div><div class="menu-item-price">12</div></div>
+        <div class="menu-item"><div class="menu-item-name">Tuckerman&rsquo;s Pale Ale, NH (16oz)</div><div class="menu-item-price">12</div></div>
+        <div class="menu-item"><div class="menu-item-name">Vermont Beer Makers Scarlet Red Ale, VT (16oz)</div><div class="menu-item-price">12</div></div>
+        <div class="menu-item"><div class="menu-item-name">Viva Huckleberry, MA (12oz) &mdash; fruited tequila seltzer</div><div class="menu-item-price">10</div></div>
+        <div class="menu-item"><div class="menu-item-name">Night Shift Nite Lite, MA (12oz)</div><div class="menu-item-price">9</div></div>
+        <div class="menu-item"><div class="menu-item-name">Hero95 Ultralight Lager, MA (12oz)</div><div class="menu-item-price">9</div></div>
+        <div class="menu-item"><div class="menu-item-name">Shacksbury Cider, VT (12oz) &mdash; Yuzu Ginger or Blackberry Lime</div><div class="menu-item-price">10</div></div>
+        <div class="menu-item"><div class="menu-item-name">Suncruiser, MA (12oz) &mdash; vodka iced tea/lemonade</div><div class="menu-item-price">9</div></div>
+        <div class="menu-item"><div class="menu-item-name">Downeast Hard Cider, MA (12oz) Original</div><div class="menu-item-price">9</div></div>
+        <div class="menu-item"><div class="menu-item-name">Downeast Black Cherry / Peach Mango</div><div class="menu-item-price">10</div></div>
+        <div class="menu-item"><div class="menu-item-name">Apres Hard Seltzer, ME (12oz) &mdash; lemon-lime or raspberry</div><div class="menu-item-price">9</div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Whites &amp; Sparkling</h3>
+        <p class="menu-group-note">Glass / bottle</p>
+        <div class="menu-item"><div><div class="menu-item-name">Benvolio Pinot Grigio, Italy</div><div class="menu-item-desc">Crisp fruit ranging tropical to yellow apple; spice &amp; orange peel</div></div><div class="menu-item-price">9 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Noble Vines Sauvignon Blanc, California</div><div class="menu-item-desc">Pale straw, honeydew &amp; passionfruit, clean zesty finish</div></div><div class="menu-item-price">10 / 40</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Villa Maria Sauvignon Blanc, New Zealand</div><div class="menu-item-desc">Crisp &amp; vibrant, lime &amp; fresh herbs, melon &amp; ruby red</div></div><div class="menu-item-price">11 / 44</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">50&deg; Riesling, Germany</div><div class="menu-item-desc">Trocken Riesling, green apple &amp; citrus</div></div><div class="menu-item-price">11 / 44</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Val Di Toro &ldquo;Auramaris&rdquo; Vermentino, Italy</div><div class="menu-item-desc">Bright yellow, mineral character, pear &amp; citrus</div></div><div class="menu-item-price">12 / 48</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Routas Vin de Provence, France</div><div class="menu-item-desc">Ros&eacute; blend of grenache, syrah &amp; merlot; strawberry &amp; vanilla</div></div><div class="menu-item-price">10 / 40</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Matchbook Chardonnay, California</div><div class="menu-item-desc">Touch of oak, pear &amp; melon, lemon curd &amp; vanilla finish</div></div><div class="menu-item-price">10 / 40</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Domaine Lafage &ldquo;Novellum&rdquo; Chardonnay, France</div><div class="menu-item-desc">Green apple, melon &amp; lemon zest, round &amp; textured</div></div><div class="menu-item-price">12 / 48</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Sofia Rose Sparkling, California</div><div class="menu-item-desc">Citrus &amp; small red fruits, soft bubbles</div></div><div class="menu-item-price">13 / 52</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Bollicini Prosecco, Italy</div><div class="menu-item-desc">Straw yellow, fine persistent bubbles, pineapple &amp; grapefruit</div></div><div class="menu-item-price">9 / 35</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Nicolas Feuillatte Brut R&eacute;serve, France</div><div class="menu-item-desc">Pale gold, delicate bubbles, pear &amp; almond</div></div><div class="menu-item-price">85</div></div>
+      </div>
+
+      <div class="menu-group">
+        <h3 class="menu-group-title">Reds</h3>
+        <p class="menu-group-note">Glass / bottle</p>
+        <div class="menu-item"><div><div class="menu-item-name">Cycles Gladiator Pinot Noir, California</div><div class="menu-item-desc">Cherry &amp; toasted oak, pomegranate &amp; strawberry</div></div><div class="menu-item-price">9 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Grayson Merlot, California</div><div class="menu-item-desc">Purple garnet, black cherry &amp; currant, soft tannins</div></div><div class="menu-item-price">10 / 40</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">La Linda Malbec, Argentina</div><div class="menu-item-desc">Rich &amp; bold, ripe black fruits, black pepper spice</div></div><div class="menu-item-price">9 / 36</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Troublemaker Red Blend, California</div><div class="menu-item-desc">Oak-barreled Syrah, Grenache, Mourv&egrave;dre, Zinfandel &amp; Petite Sirah</div></div><div class="menu-item-price">12 / 48</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Broadside Cabernet Sauvignon, California</div><div class="menu-item-desc">Black cherry, ripe currant, roasted coffee, supple tannins</div></div><div class="menu-item-price">11 / 44</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Vietti Barbera d&rsquo;Asti, Italy</div><div class="menu-item-desc">Medium-bodied, good acidity, red cherry finish</div></div><div class="menu-item-price">11 / 44</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Drumheller Cabernet Sauvignon, Washington</div><div class="menu-item-desc">Fruit-forward, cola, cherries &amp; blackberry, silky finish</div></div><div class="menu-item-price">11 / 44</div></div>
+        <div class="menu-item"><div><div class="menu-item-name">Spada Amarone &ldquo;Firmus,&rdquo; Italy</div><div class="menu-item-desc">Luscious, garnet in color, cherry &amp; plum</div></div><div class="menu-item-price">80</div></div>
+      </div>
+
+    </div>
+
+    <div class="menu-download">
+      <div>
+        <h4>Prefer the print version?</h4>
+        <p style="color:var(--ink-soft); font-size:0.9rem;">Download the PDF to view or print the full beverage &amp; wine list.</p>
+      </div>
+      <a class="btn btn-outline btn-sm" href="https://www.backdeckboston.com/sites/default/files/Drinks%20Summer%202026-%20beverage%20and%20wine.pdf" target="_blank" rel="noopener">Download PDF</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

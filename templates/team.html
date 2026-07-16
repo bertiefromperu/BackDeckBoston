@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Team | Back Deck Boston{% endblock %}
+{% block meta_description %}Meet the team behind Back Deck: Chef Paul Sussman, proprietor Bradley Fredericks, and the managers who run the deck every day.{% endblock %}
+
+{% set about_active = 'team' %}
+{% block content %}
+
+<section class="page-hero page-hero--compact">
+  <div class="container page-hero-content">
+    <p class="eyebrow">About &middot; Team</p>
+    <h1>The people behind the grill</h1>
+    <p class="lede">&ldquo;Food creates such a bond between people, that&rsquo;s why sharing a meal and breaking bread is a cultural experience in most parts of the world.&rdquo; Our leadership team is committed to constantly improving Back Deck for our guests, steering our direction while working closely with our crew.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="display:flex; flex-direction:column; gap:3rem;">
+    {% include "_about_subnav.html" %}
+
+    <div class="team-card reveal">
+      <div class="media media-photo-food1"></div>
+      <div>
+        <h3>Paul Sussman</h3>
+        <span class="role">Chef / Co-Owner</span>
+        <p>The art of grilling is in Paul&rsquo;s DNA. His earliest memories of it are asados &mdash; the carnivorous feasts traditional in South America &mdash; thrown by his mother&rsquo;s Chilean family during his childhood in Lexington, Massachusetts. Paul graduated from Brandeis University with a degree in psychology, but a lifelong love of food led him to a job cooking at The Fishmonger&rsquo;s Caf&eacute; in Woods Hole, Cape Cod.</p>
+        <p style="margin-top:0.85rem;">He went on to hone his craft at the acclaimed Providence restaurant Al Forno, where he manned the charcoal grill and wood-fired brick oven for two years. In 1991 he opened Daddy-O&rsquo;s in Cambridge, blending regional American cuisine with his Jewish and South American heritage; it ran for nine years before he opened Macondo Latin Grill in 2001, focused on flame-cooked South American food. He later served as executive chef at The Fireplace in Brookline and opened the kitchen at Z Square Cambridge in Harvard Square.</p>
+        <p style="margin-top:0.85rem;">Paul remains devoted to &ldquo;quality, a love of lively flavors and a desire to offer socially and environmentally conscious food at reasonable prices.&rdquo; He contributes to culinary publications, sits on the board of Operation Frontline Boston, and is a charter member of Chefs Collaborative, a nonprofit promoting local, sustainable food systems.</p>
+      </div>
+    </div>
+
+    <div class="team-card reveal">
+      <div class="media media-photo-deck"></div>
+      <div>
+        <h3>Bradley Fredericks</h3>
+        <span class="role">Proprietor</span>
+        <p>Brad grew up in Easton, Massachusetts and graduated from Babson College before leaving for Houston, Texas, to work as a CPA for Exxon &mdash; where he discovered a culinary culture that shared his craving for all things grilled. After years of fajitas and barbecue in Houston, he headed further west for an MBA from UCLA in California.</p>
+        <p style="margin-top:0.85rem;">Recognizing that Boston lacked good Tex-Mex and barbecue, Brad opened Fajitas &amp; &rsquo;Ritas in Downtown Crossing in 1989, which grew into several Boston locations. He and his wife Maria later launched Finnegans Wake, a Cambridge restaurant serving Irish cuisine.</p>
+        <p style="margin-top:0.85rem;">In 2011, Brad partnered with Chef Paul Sussman to open Back Deck, built around charcoal-fired grilling, on West Street near his original Downtown Crossing location. He remains active in the neighborhood&rsquo;s growth, serving on the Advisory Board for the Downtown Boston Business Improvement District and the Massachusetts Restaurant Association&rsquo;s board. An amateur grill-master himself, Brad keeps a year-round entertaining setup in his Jamaica Plain backyard &mdash; his own rib-eye recipe inspired Back Deck&rsquo;s signature Cowboy Steak. He and Maria have four children.</p>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:1rem;">
+      <p class="eyebrow">Managers</p>
+      <h2>Running the deck, every service</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card reveal">
+        <h3>Steven Burtman</h3>
+        <span class="role" style="display:block; margin-top:-0.4rem; margin-bottom:0.5rem;">General Manager</span>
+      </div>
+      <div class="card reveal reveal-delay-1">
+        <h3>Maria Nguyen</h3>
+        <span class="role" style="display:block; margin-top:-0.4rem; margin-bottom:0.5rem;">Floor Manager</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

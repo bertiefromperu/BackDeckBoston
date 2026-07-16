@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Back Deck Boston{% endblock %}
+{% block meta_description %}Contact Back Deck at 2 West St., Boston, MA. Call 617-670-0320, email info@backdeckboston.com, or reserve a table on OpenTable.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="hero-media media media-photo-deck"></div>
+  <div class="container page-hero-content">
+    <p class="eyebrow">Contact</p>
+    <h1>Get in touch</h1>
+    <p class="lede">Reservations, questions or feedback &mdash; we&rsquo;d love to hear from you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split reverse">
+      <div>
+        <p class="eyebrow">Reservations</p>
+        <h2>Book a table on OpenTable</h2>
+        <p style="color:var(--ink-soft); margin-top:0.75rem;">The fastest way to grab a spot on the deck is to reserve online. Walk-ins are always welcome, but tables go quickly on weekends.</p>
+        <a class="btn btn-primary" style="margin-top:1.5rem;" href="http://www.opentable.com/back-deck-reservations-boston?rtype=ism&amp;restref=99712" target="_blank" rel="noopener">Reserve Now on OpenTable</a>
+
+        <div style="margin-top:2.5rem;">
+          <p class="eyebrow">Reach us directly</p>
+          <address style="font-style:normal; line-height:2; margin-top:0.75rem;">
+            2 West St., Boston, MA<br>
+            Corner of West &amp; Washington<br>
+            P: <a href="tel:6176700320" style="text-decoration:underline;">617-670-0320</a><br>
+            <a href="mailto:info@backdeckboston.com" style="text-decoration:underline;">info@backdeckboston.com</a>
+          </address>
+        </div>
+      </div>
+      <div class="split-media">
+        <div class="media media-photo-food2 media-tall reveal"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container" style="max-width:720px;">
+    <div class="section-head center">
+      <p class="eyebrow">Send a Message</p>
+      <h2>Questions, feedback, or anything else</h2>
+    </div>
+
+    <form class="contact-form card" data-mailto-form data-mailto-to="info@backdeckboston.com" data-mailto-subject="Website Contact Inquiry">
+      <div class="form-row">
+        <div class="field">
+          <label for="ct-name">Name</label>
+          <input id="ct-name" name="Name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="ct-email">Email</label>
+          <input id="ct-email" name="Email" type="email" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ct-subject">Subject</label>
+        <input id="ct-subject" name="Subject" type="text">
+      </div>
+      <div class="field">
+        <label for="ct-message">Message</label>
+        <textarea id="ct-message" name="Message" placeholder="How can we help?" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}
